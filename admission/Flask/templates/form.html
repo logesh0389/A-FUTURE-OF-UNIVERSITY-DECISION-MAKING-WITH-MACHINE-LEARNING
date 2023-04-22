@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University Decision Making</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-image: url("../static/img/form-bg.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			font-family: 'Chivo Mono', monospace;
+		}
+
+		#title {
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		#form-container {
+			background-color: white;
+			position: absolute;
+			padding: 20px 40px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 10px #919090;
+			top: 60%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+			width: 40%;
+		}
+
+		#form-container div{
+			margin: 20px 0;
+		}
+
+		#form-container p {
+			margin-bottom: 10px;
+		}
+
+		#form-container input[type="text"] {
+			width: 100%;
+			padding: 15px 10px;
+			background-color: #e5e5e5;
+			border: none;
+			outline: none;
+			border-radius: 10px;
+		}
+
+		::placeholder {
+			font-family: 'Chivo Mono', monospace;
+			font-size: 16px;
+		}
+
+		#predict-btn {
+			width: 80%;
+			display: block;
+			margin: auto;
+			border: none;
+			outline: none;
+			padding: 20px 10px;
+			text-align: center;
+			font-family: 'Chivo Mono', monospace;
+			font-size: 18px;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			color: white;
+			background-color: #652c87;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		#predict-btn:hover {
+			background-color: #f97c37;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1 id="title">university admission prediction system</h1>
+
+	<div id="form-container">
+		<form action="/y_predict" method="post">
+
+			<div>
+				<input type="text" name="gre" placeholder="GRE Score (out of 340)" required>
+			</div>
+
+			<div>
+				<input type="text" name="toefl" placeholder="TOEFL Score (out of 120)" required>
+			</div>
+
+			<div>
+				<p>Select University No</p>
+				<label> <input type="radio" name="rating" value="1"> 1 </label>
+				<label> <input type="radio" name="rating" value="2"> 2 </label>
+				<label> <input type="radio" name="rating" value="3"> 3 </label>
+				<label> <input type="radio" name="rating" value="4"> 4 </label>
+				<label> <input type="radio" name="rating" value="5"> 5 </label>
+			</div>
+
+			<div>
+				<input type="text" name="sop" placeholder="SOP (out of 5)"  required>
+			</div>
+
+			<div>
+				<input type="text" name="lor" placeholder="LOR (out of 5)"  required>
+			</div>
+
+			<div>
+				<input type="text" name="cgpa" placeholder="CGPA (out of 10)" required>
+			</div>
+
+			<div>
+				<label> <input type="radio" name="research" value="1"> Research </label>
+				<label> <input type="radio" name="research" value="0"> No Research </label> 
+			</div>
+
+			<div>
+				<input id="predict-btn" type="submit" value="Predict">
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</html>

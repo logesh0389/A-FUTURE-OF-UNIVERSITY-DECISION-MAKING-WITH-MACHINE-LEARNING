@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University Decision Making</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Chivo Mono', monospace;
+		}
+
+		#main-container {
+			width: 100%;
+			height: 100vh;
+			background-image: url("../static/img/no-chance.jpg");
+			background-size: cover;
+			position: relative;
+		}
+
+		#result {
+			position: absolute;
+			top: 40%;
+			left: 75%;
+			transform: translate(-75%, -40%);
+			box-shadow: 1px 1px 10px #919090;
+			padding: 20px 40px;
+			border-radius: 10px;
+		}
+
+		h1 {
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="main-container">
+		<div id="result">
+			<h1>Prediction</h1>
+			<h3>{{ prediction_text }}</h3>
+		</div>
+	</div>
+
+
+</body>
+</html>

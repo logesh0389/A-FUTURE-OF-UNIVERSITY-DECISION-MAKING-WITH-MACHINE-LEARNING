@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University Decision Making</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		body {
+			background-color: #EFEFEF;
+			font-family: 'Chivo Mono', monospace;
+
+		}
+
+		#main-container {
+			display: flex;
+			height: 100vh;
+			width: 100%;
+			margin-top: 50px;
+		}
+
+		#box1 {
+			flex: 50%;
+			display: flex;
+			justify-content: center;
+		}
+
+		#box1 div {
+			margin-top: 100px;
+		}
+
+		#box1 h1 {
+			color: #f1c50e;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+
+		#box2 {
+			flex: 50%;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="main-container">
+		<div id="box1">
+			<div>
+				<h1>Prediction</h1>
+				<h2>{{ prediction_text }}</h2>
+			</div>
+		</div>
+		<div id="box2">
+			<img src="../static/img/chance.jpg">
+		</div>
+	</div>
+
+
+</body>
+</html>

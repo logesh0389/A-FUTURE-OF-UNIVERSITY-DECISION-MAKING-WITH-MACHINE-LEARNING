@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University Decision Making</title>
+	<style>
+  		@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		#main-container {
+			background-color: #f2f2f2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+
+		}
+
+		#bg-box {
+			width: 70%;
+			height: 60%;
+			border: 15px solid #f97c37;
+		}
+
+		#banner {
+			display: flex;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50%;
+			padding: 0 20px;
+			gap: 20px;
+		}
+
+		#box1 {
+			background-color: white;
+			flex: 50%;
+			height: 600px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#box1 div {
+			padding: 0 30px;
+			text-align: center;
+			font-family: 'Chivo Mono', monospace;
+		}
+
+		#box1 p {
+			margin: 30px 0;
+		}
+
+		#box1 button {
+			font-family: 'Chivo Mono', monospace;
+			width: 80%;
+			padding: 20px 20px;
+			cursor: pointer;
+			background-color: #f97c37;
+			outline: none;
+			border: none;
+			border-radius: 10px;
+			color: white;
+			font-size: 18px;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+		}
+
+		#box1 button:hover {
+			background-color: #111111;
+		}
+
+
+		#box2 {
+			flex: 50%;
+			height: 600px;
+			background-image: url("../static/img/university.jpg");
+			background-size: cover;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="main-container">
+		<div id="bg-box"></div>
+	</div>
+
+	<div id="banner">
+		<div id="box1">
+			<div>
+				<h1>University Decision Making</h1>
+				<p>University Admission Prediction System : Enter your details and get probability of your admission</p>
+				<a href="/form">
+					<button>precict</button>
+				</a>
+			</div>
+		</div>
+		<div id="box2">
+			
+		</div>
+	</div>
+</body>
+</html>
